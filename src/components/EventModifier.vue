@@ -1,17 +1,18 @@
 <template>
         <div class="hello">
             <h1>{{ msg }}</h1>
-
-            <p> Contador: {{ contador }}</p>
-
+            <div id="divContador">
+                <p id="contador"> Contador: {{ contador }}</p>
+            </div>
             <button v-on:click="contador+=1" >Presioname</button>
 
-            <hr>
-
-            <p>datos evento: {{  datosEvento }}</p>
-
-            <button v-on:click="verEvento">Ver datos del evento click</button>
-    
+           
+            <div id="datosEvento">
+                <p id="pDatoEvento">Dato evento: {{  datosEvento }}</p>
+            </div>
+            <div id="divBtnVerDatos"> 
+                <button v-on:click="verEvento">Ver datos del evento click</button>
+            </div>
         </div>
   </template>
   
@@ -55,5 +56,31 @@
         
         .hello{
             background-color: darkgoldenrod;
+        }
+
+        #contador{
+            font-weight: bold;
+        }
+
+        #pDatoEvento{
+            font-weight: bold;
+        }
+        #datosEvento{
+            display: flex;
+            justify-content: center;
+        }
+
+        #divContador{
+            display: flex;
+            
+            justify-content: center;
+            
+            
+        }
+
+        #divBtnVerDatos{
+            display: flex;
+            justify-content: center;
+            padding-bottom: 10px;
         }
   </style>
